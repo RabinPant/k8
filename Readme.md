@@ -49,3 +49,5 @@ kubectl create -f replicaset.yaml
 
 kubectl edit replicaset myapp-replicaset
 ```
+
+###Deployment
