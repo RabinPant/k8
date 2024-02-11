@@ -50,4 +50,13 @@ kubectl create -f replicaset.yaml
 kubectl edit replicaset myapp-replicaset
 ```
 
-###Deployment
+### Deployment
+
+```
+kubectl create -f deployment.yaml
+
+kubectl rollout status deployment.apps/myapp-deployment
+
+kubectl delete deployment myapp-deployment
+
+```
