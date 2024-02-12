@@ -59,4 +59,18 @@ kubectl rollout status deployment.apps/myapp-deployment
 
 kubectl delete deployment myapp-deployment
 
+Inspect the pods and webservices:
+kubectl get pod
+kubectl get deploy
+
+Detail of the deployment or the Pod:
+kubectl describe frontend
+
+```
+
+### Basic of networking in K8
+
+```
+
+
 ```
