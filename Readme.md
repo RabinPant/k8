@@ -66,9 +66,11 @@ kubectl get deploy
 Detail of the deployment or the Pod:
 kubectl describe frontend
 
+
+TCP connection on port 443 from source 0.0.0.0/0 and to destination 0.0.0.0/0
 ```
 
-### Basic of networking in K8
+
 
 ```
 
