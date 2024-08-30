@@ -1,6 +1,7 @@
 ## command for k8 replicaset
 
 ```
+kubectl run nginx --image= nginx
 kubectl create -f replicaset-defination.yml
 kubectl get replicaset
 kubectl delete replicaset myapp-relicaset
@@ -44,7 +45,9 @@ kubectl create -f replicaset.yaml
 
 # check status: kubectl get replicaset
 
- kubectl get pods
+ kubectl get replicaset
+ kubectl replace -f replicaset-defination.yml
+ kubectl scale --replicas=6 -f replicaset-defination.yml
  kubectl delete pod myapp-...
 
 kubectl edit replicaset myapp-replicaset
@@ -66,9 +69,11 @@ kubectl get deploy
 Detail of the deployment or the Pod:
 kubectl describe frontend
 
+
+TCP connection on port 443 from source 0.0.0.0/0 and to destination 0.0.0.0/0
 ```
 
-### Basic of networking in K8
+
 
 ```
 
