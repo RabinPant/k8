@@ -51,6 +51,7 @@ kubectl create -f replicaset.yaml
  kubectl delete pod myapp-...
 
 kubectl edit replicaset myapp-replicaset
+kubectl edit rs new-replicaset
 ```
 
 ### Deployment
