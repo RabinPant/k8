@@ -47,8 +47,8 @@ kubectl create -f replicaset.yaml
 
  kubectl get replicaset
  kubectl replace -f replicaset-defination.yml
- kubectl scale --replicas=6 -f replicaset-defination.yml
  kubectl delete pod myapp-...
+kubectl scale rs new-replica-set --replicas=5
 
 kubectl edit replicaset myapp-replicaset
 kubectl edit rs new-replicaset
@@ -59,6 +59,13 @@ kubectl edit rs new-replicaset
 ```
 kubectl create -f deployment.yaml
 
+kubectl get deployments
+
+kubectl get replicaset
+
+kubectl get pods
+
+To see all the parts => kubectl get all
 kubectl rollout status deployment.apps/myapp-deployment
 
 kubectl delete deployment myapp-deployment
