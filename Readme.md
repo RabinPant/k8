@@ -1,3 +1,40 @@
+### DAY 1 Learning:
+```
+what is k8
+=> k8 is the container orchestration platform which helps to deploy the containers and the run the application
+
+why the need of k8?
+Container are ephermal in nature, i.e container are short lived and they provide only one host. if one resources requires lots of memory then the other might not get the resources to spin another container. single host is the problem and the last but the most important is the container can't spin new container if its killed by external force. These all prolem of container is fixed by the k8. 
+
+Single host, autohealing, loadbalancer, autoscaling, doesn't give any enterprise solution => problem with container
+
+
+k8 => group of cluster => group of node => install in master node archticture so basically it can provide support to lots of container
+autoscaling = replicaset
+k8 also support HPA(horizonatal pod autoscale)
+AutoHealing = when pods start to go down, apiServer will spin up new container.
+k8 custom resource => ingress controller
+=====================================================================================
+
+k8 architecture:
+k8 has control plane and Data plane:
+
+In control plane : APIserver, scheduler, etcd, CCM
+In data plane: kublet, proxy and controler plane
+
+
+Docker runtime = docker shimp 
+k8 = supports any contianer runtime =? continerD, crio etc
+kubelet = > if anything goes wrong with pod
+kubeproxy => Ipaddress, 
+
+
+```
+
+
+
+
+
 ## command for k8 replicaset
 
 ```
