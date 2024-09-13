@@ -51,6 +51,30 @@ aws config
 ## Deploy Your first app
 
 ```
+pod = lowest level of deployment => defination of how to run container
+
+if you put two continer in same pod:
+* shared Network
+* Shared Storage
+k8 CLI  = kubectl
+
+Install minikube, and KIND
+
+
+Difference container pod and deployment?
+Pod can be single or multiple contaier and pod provides yaml specification for container deployment.
+Docker => k8 because of auto healing and auto scaling
+Pod can't do auto healing and auo scaling so to implement this we need
+deployment.
+deployment => create replicaet and this replicaset will rollout pod
+repicas => no of pod that we want for larger traffic.
+
+
+Deployment VS Replicaset
+RS = Controller implmenting autohealing or autoscaling
+
+kubectl get all -A = get all resources
+kubectl apply -f pod.yml = create the pod
 
 
 ```
