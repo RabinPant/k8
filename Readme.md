@@ -19,19 +19,41 @@ k8 custom resource => ingress controller
 k8 architecture:
 k8 has control plane and Data plane:
 
-In control plane : APIserver, scheduler, etcd, CCM
-In data plane: kublet, proxy and controler plane
+In control plane(Master Node) : APIserver, scheduler, etcd, CCM
+In data plane (Worker Node): kublet, proxy and conntainer runtime
 
 
 Docker runtime = docker shimp 
 k8 = supports any contianer runtime =? continerD, crio etc
-kubelet = > if anything goes wrong with pod
-kubeproxy => Ipaddress, 
+kubelet = > if anything goes wrong with pod, creation of pod, makes pod run all the time
+kubeproxy => Ipaddress, loadbalancing, use IpTables
+Container Runtime=> for the application to run in the k8
 
+MASTER NODE || CONTROL PLANE:
+
+API SERVER = Heart of k8, gets instruction from external world
+Scheduler = scheduling running of pod in node1 or node2 after getting instruction from the API server
+etcd = key value pair/ have all the cluster related information
+controller manager = to support autoscailing k8 has controllers/ Relicaset controller manage the autoscailing
+CCM(Cloud control manager) = if you want to run k8 like EKS in the cloud then CCM comes handy.
+
+```
+Day 2
+## How to manage Hundreds of kubernetes cluster
+```
+what kuberntes distribution have you used in the production?
+EKS, openshift , Rancher, Tanzu
+Common tools used to manage 100 of K8 cluster = KOPS
+
+aws config
+
+```
+## Deploy Your first app
 
 ```
 
 
+```
 
 
 
