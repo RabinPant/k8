@@ -78,8 +78,39 @@ kubectl apply -f pod.yml = create the pod
 
 
 ```
+Day 3:
+## k8 services
+
+```
+pod -> deployment-> service
+why???
+No service scenario
+
+when there are 10 concurrent user
+
+every time pod goes down. when it comes up then the IP address is change if there is not service
+
+service makes use of kube-proxy which helps in load balacing.
+172.15.3.4
+172.16.3.5    -> Deploy -> svc          <- user will hit the service
+172.16.3.6
+
+svc -< load balancing
+It helps in service discovery
+ip address -> labels and selectors, different labels like payment label for pods
+
+3) exposed to external world
+    service of three types:
+        -1 cluster IP = inside (Discovery)
+        2 Nodeport = inside org ()
+        3 loadbalancer = external world exposed
 
 
+
+
+
+
+```
 
 ## command for k8 replicaset
 
