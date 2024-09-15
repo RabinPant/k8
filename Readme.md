@@ -107,8 +107,47 @@ ip address -> labels and selectors, different labels like payment label for pods
 
 
 
+```
+Day 4
+### Some questions
 
+```
+Difference between Docker and Kubernetes?
+Docker is a contanier platform and kubernetes is contianer orchastration platform. continers are ephermal in nature and deosn't provide the feature like auto healing, auto sacling, clustering enterprise level support.
 
+ What are the main components of kubernetes architecture?
+1) control plane(API server, scheduler, controller manager, C-CM, ETCD)
+2) Data Plane(Kubelet, kube-proxy, container runtime)
+
+What are the main differences between the Docker Swarm and kubernetes?
+kubernetes is better suited for large organisations as it offers more scalability, networking capabilities like policises and huge third party ecosystem support.
+
+Difference container and kubernetes pod?
+a pod in k8 is a runtime specification of a container in docker. a pod provides more decalritive way of defining using YAML and you can run more than one contaienr in a pod.
+
+What is a namespace in a k8?
+In k8 namespace is a logical isolation of resources, network policies, rbac and everything. for example, there are two projects using same k8 cluster. one project can use ns2 without any overlap and authentication problems. RBAC(role based access control).
+
+what is the role of kube proxy?
+kube proxy works by maintaining a set of network rule on each node in the cluster, which are updated dynamically as services are added or removed. when a client sends a request to a service, the request is intercepted by kube-proxy on the node where it was received. kube-proxy then looks up the destination endpoint for the services and routes the request accordingly.
+
+kube-proxy is an essential component of a kubernetes cluster, as it ensures that services can communicate with each other.
+
+what are the different types of services within k8?
+There are different types of services that a user can create
+1) cluster IP Mode
+2) Node port mode
+3) load balancer mode
+
+what is the difference between nodeport and loadbalancer?
+when a service is created a nodeport type, the kube-proxy updates the Iptables with node ip address and port that is chosen in the service configuration to access the pods.
+
+where as if you create a service as type loadbalancer, the cloud contorl manager creates a external load balancer IP using the underlying cloud provider logic in the C-CM. user can access services using the external IP.
+
+what is the role of Kubelet?
+Kubelet manages the containers that are scheduled to run on that node. It ensures that the container are running and healthy, and that the reources they need are available.
+
+kublet communicates with the k8 API server to get the information about the container that should be running on the node, and then starts and stops the containers as needed to maintain the desired state. It also monitors the containers to ensure that they are running correctly and restarts them if necessary.
 
 ```
 
