@@ -149,6 +149,12 @@ Kubelet manages the containers that are scheduled to run on that node. It ensure
 
 kublet communicates with the k8 API server to get the information about the container that should be running on the node, and then starts and stops the containers as needed to maintain the desired state. It also monitors the containers to ensure that they are running correctly and restarts them if necessary.
 
+
+replication Controller | Replica set
+
+These both are different technology where replication controller is the old one and the replica set is the new one.
+
+
 ```
 
 ### K8 Services Deep Dive | Traffic flow using kubeshark
@@ -160,6 +166,19 @@ outside by using the load balancer.
 
 Service Discovery:
 discovery of service using selector and label.
+
+
+```
+
+### Labels and selectors
+```
+The replicaset watches all the pods, in other word it monitors all the pods and to know which to look at there comes the concept of labels and selectors.
+
+when we label pod while creating pod.defination.yml file then in replicaset we create a selector which tries to match the labels with that pod.
+
+kubectl replace -f replicaset-definition.yml
+kubectl scale --replicas=6 -f replicaset-definition.yml
+kubectl scale --replicas=6 replicaset myapp-replicaset
 
 
 ```
@@ -185,11 +204,12 @@ metadata:
     name: myapp-replicaset
     labels: 
         app: myapp
+        type: front-end
 
 spec: 
     selector:
         matchLabels:
-            app: myapp
+            type: front-end
     replicas: 3
     template:
         metadata:
@@ -208,6 +228,8 @@ spec:
 kubectl create -f replicaset.yaml
 
 # check status: kubectl get replicaset
+
+kubectl get replicationcontroller
 
  kubectl get pods
  kubectl delete pod myapp-...
