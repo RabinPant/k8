@@ -154,6 +154,12 @@ kublet communicates with the k8 API server to get the information about the cont
 ### K8 Services Deep Dive | Traffic flow using kubeshark
 
 ```
+play around Node port and Load balancer mode in the service yaml file
+expose application using node port for internal organization and
+outside by using the load balancer.
+
+Service Discovery:
+discovery of service using selector and label.
 
 
 ```
