@@ -182,6 +182,39 @@ kubectl scale --replicas=6 replicaset myapp-replicaset
 
 
 ```
+
+### Deployment Rollout and Update
+```
+kubectl rollout status deployment/myapp-deployment
+kubectl rollout history deployment/my-app-deployment
+
+Deployment Strategy:
+
+Recreate : All the pods are killed and then all the pods are re-run again
+There will be some interval when we kill and re-run the pods.
+
+Rolling update: one pod is killed then another is up, individula pods are killed and brought up again, one at a time.
+
+kubectl apply -f deployment-definition.yml
+kubectl set image deployment/my-app-deployment nginx-container=nginx:1.9.1
+
+upgrade the image:
+*** kubectl edit deploy frontend
+kubectl set image deploy frontend simple-webapp=kodekloud/webapp-color:v2
+Here simple-webapp is the container name.
+
+Rollback=> kubectl rollout undo deployment/my-app-deployment
+kubectl rollout status deployment/my-app-deployment
+kubectl rollout history deployment/my-app-deployment
+
+
+*** Kubectl create -f deployment.yaml
+*** kubectl rollout status deployment.apps/myapp-deploymen
+*** kubectl history status deployment.apps/myapp-deployment
+*** 
+
+
+```
 ## command for k8 replicaset
 
 ```
