@@ -215,6 +215,11 @@ kubectl rollout history deployment/my-app-deployment
 
 
 ```
+
+### Networking
+```
+
+```
 ## command for k8 replicaset
 
 ```
@@ -291,6 +296,33 @@ kubectl describe frontend
 ### Basic of networking in K8
 
 ```
+
+
+```
+```
+Study Guide for Kubernetes Services, Ingress with TLS, and Ingress Controllers
+Overview of Kubernetes Services
+Kubernetes Services: An abstract way of exposing applications running as pods within a Kubernetes cluster. Services enable communication between different components of an application and allow external access to the application. 1
+Ingress Controllers
+Ingress Controllers: Manage external access to services in a Kubernetes cluster, typically HTTP. They provide routing rules to manage traffic and can handle SSL/TLS termination.
+Key Functions of Ingress Controllers:
+Routing: Directs incoming traffic to the appropriate service based on defined rules.
+Security: Can implement SSL/TLS for secure communication.
+TLS (Transport Layer Security) in Ingress
+SSL Passthrough: This method allows encrypted client-to-server requests to pass through the load balancer without decryption. The load balancer acts merely as a pass-through, which can impact latency. 2
+
+SSL Offloading: This technique involves decrypting SSL/TLS traffic at the load balancer level, reducing the load on backend services and improving performance. It addresses latency issues caused by SSL passthrough. 3
+
+Example of Secure Ingress
+Client and Server Certificates: To establish secure connections, client and server certificates can be created. This ensures that both parties can authenticate each other, enhancing security. 4
+Important Concepts to Remember
+Ingress Resource: Defines how external HTTP/S traffic should be routed to services.
+TLS Termination: The process of decrypting SSL/TLS traffic at the ingress controller level.
+Questions to Consider
+What are the differences between SSL passthrough and SSL offloading?
+How do ingress controllers manage traffic in a Kubernetes cluster?
+What steps are involved in setting up secure ingress with TLS?
+This study guide provides a structured overview of Kubernetes services, ingress controllers, and TLS implementation, helping you grasp the essential concepts and practices in managing secure traffic in Kubernetes.
 
 
 ```
