@@ -4,7 +4,10 @@ what is k8
 => k8 is the container orchestration platform which helps to deploy the containers and the run the application
 
 why the need of k8?
-Container are ephermal in nature, i.e container are short lived and they provide only one host. if one resources requires lots of memory then the other might not get the resources to spin another container. single host is the problem and the last but the most important is the container can't spin new container if its killed by external force. These all prolem of container is fixed by the k8. 
+Container are ephermal in nature, i.e container are short lived and they provide only one host.
+if one resources requires lots of memory then the other might not get the resources to spin another container.
+single host is the problem and the last but the most important is the container can't spin new container
+if its killed by external force. These all prolem of container is fixed by the k8. 
 
 Single host, autohealing, loadbalancer, autoscaling, doesn't give any enterprise solution => problem with container
 
